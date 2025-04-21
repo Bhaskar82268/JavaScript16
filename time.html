@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Show Current Date & Time</title>
+  <style>
+    #dateTime {
+      font-size: 25px;
+      margin-top: 25px;
+    }
+    body{
+        background-color:#CEC2FF;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Current Date & Time</h2>
+
+  <div id="dateTime">Loading...</div>
+
+  <script>
+    function showDateTime() {
+      const now = new Date();
+      const formatted = now.toLocaleString();
+      document.getElementById("dateTime").textContent = formatted;
+    }
+
+    
+    showDateTime();
+    setInterval(showDateTime, 1000);
+  </script>
+
+</body>
+</html>
